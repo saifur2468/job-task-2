@@ -12,6 +12,7 @@ import App from "./App";
 import Errorpage from "./Component/Errorpage";
 import Product from "./Component/product";
 import Cart from "./Component/cart";
+import ProductDetailes from "./Component/ProductDetailes";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
         path: "cart",
         element: <Cart />,
       },
+      {
+  path: "product/:id",
+  element: <ProductDetailes />,
+  loader: () => fetch("/product.json"),
+}
     ],
   },
 ]);

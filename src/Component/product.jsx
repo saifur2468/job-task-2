@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -95,11 +96,11 @@ const Product = () => {
                   )}
                 </div>
 
-                <div className="card-actions mt-4">
-                  <button className="btn btn-primary w-full">
-                    View Details
-                  </button>
-                </div>
+                <Link to={`/product/${product.id}`}>
+  <button className="btn btn-primary w-full">
+    View Details
+  </button>
+</Link>
               </div>
             </div>
           ))}
