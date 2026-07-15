@@ -9,39 +9,34 @@ import "./index.css";
 
 import Home from "./Component/Home";
 import App from "./App";
-import Errorpage from './Component/Errorpage';
-import Navbar from './Component/Navbar';
-import product from "./Component/product";
-import cart from "./Component/cart"
+import Errorpage from "./Component/Errorpage";
+import Product from "./Component/product";
+import Cart from "./Component/cart";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <Errorpage></Errorpage>,
+    errorElement: <Errorpage />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <App />,
       },
       {
-        path:"/product",
-        element:<product></product>
+        path: "product",
+        element: <Product />,
       },
       {
-        path:"/cart",
-        element:<cart></cart>
-      }
-
-
-
-
+        path: "cart",
+        element: <Cart />,
+      },
     ],
   },
 ]);
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-   
-      <RouterProvider router={router} />
-   
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);

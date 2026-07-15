@@ -1,6 +1,8 @@
 import "./App.css";
 
 import Hero from "./Component/Hero";
+
+
 import Trandingproduct from "./Component/Trandingproduct"
 
 
@@ -10,6 +12,7 @@ function App() {
     
       <Hero />
      <Trandingproduct></Trandingproduct>
+    
     </>
   );
 }
