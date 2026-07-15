@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaStairs } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const trendingProducts = [
   {
@@ -148,9 +149,11 @@ const TrendingGames = () => {
                       Premium Quality • Trending Collection
                     </p>
 
+                    <Link to="product">
                     <button className="btn btn-primary w-full rounded-xl">
                       Shop Now
                     </button>
+                    </Link>
                   </div>
                 </div>
               </div>
