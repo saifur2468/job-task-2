@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
+import logo from "../assets/7515317.jpg"
 const Navbar = () => {
   
   const navLinks = (
@@ -42,9 +42,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl font-bold tracking-wide text-primary">
+          {/* <Link to="/" className="btn btn-ghost text-xl font-bold tracking-wide text-primary">
             Fashion<span className="text-base-content">Store</span>
-          </Link>
+          </Link> */}
+          <img src={logo} alt="" srcset=""  className='w-24 h-20'/>
         </div>
 
      
@@ -56,7 +57,7 @@ const Navbar = () => {
 
    
         <div className="navbar-end">
-          <Link to="/login"  className="btn bg-blue-500 text-white">
+          <Link   className="btn bg-blue-500 text-white">
             Sign In
           </Link>
         </div>
