@@ -35,11 +35,11 @@ const ProductDetailes = () => {
       <div className="grid lg:grid-cols-2 gap-10">
 
         {/* Image */}
-        <div >
+        <div className="w-full rounded-xl bg-slate-50 " >
           <img
             src={image}
             alt={name}
-            className="w-[350px] h-[450px] rounded-xl"
+            className="w-[350px] h-[450px] rounded-xl mx-auto p-4"
           />
         </div>
 
