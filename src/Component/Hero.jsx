@@ -1,6 +1,8 @@
 import React from 'react';
 import img1  from "../assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg"
 import img2  from "../assets/fashion-collection-design-shopping-graphic-words_53876-125567.avif"
+import img3  from "../assets/big-sale-fashion-banner-template-mens-clothing_1308329-966.avif"
+import img4  from "../assets/14d5f677630559.5c8d3005a7c9c.png"
 const Hero = () => {
   return (
     <div>
@@ -25,7 +27,7 @@ const Hero = () => {
   </div>
   <div id="slide3" className="carousel-item relative w-full">
     <img
-      src={img2}
+      src={img3}
       className="w-full" />
     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
       <a href="#slide2" className="btn btn-circle">❮</a>
@@ -34,7 +36,7 @@ const Hero = () => {
   </div>
   <div id="slide4" className="carousel-item relative w-full">
     <img
-     src={img2}
+     src={img4}
       className="w-full" />
     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
       <a href="#slide3" className="btn btn-circle">❮</a>
