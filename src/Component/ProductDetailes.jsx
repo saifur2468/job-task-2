@@ -1,7 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { addToCart } from "./utils/cart";
+import { toast } from "react-toastify";
 const ProductDetailes = () => {
   const { id } = useParams();
   const data = useLoaderData();
@@ -78,7 +79,13 @@ const ProductDetailes = () => {
             {inStock ? "In Stock" : "Out of Stock"}
           </p>
 
-          <button className="btn btn-primary mt-6">
+          <button
+            onClick={() => {
+              addToCart(product);
+              toast.success("Product added to cart!");
+            }}
+            className="btn btn-primary mt-6"
+          >
             Add to Cart
           </button>
         </div>

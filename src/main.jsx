@@ -13,6 +13,7 @@ import Errorpage from "./Component/Errorpage";
 import Product from "./Component/product";
 import Cart from "./Component/cart";
 import ProductDetailes from "./Component/ProductDetailes";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <ToastContainer
+      position="top-right"
+      autoClose={2000}
+      theme="colored"
+    />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

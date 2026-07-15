@@ -19,12 +19,12 @@ const Product = () => {
     selectedCategory === "All"
       ? products
       : products.filter(
-          (product) => product.category === selectedCategory
-        );
+        (product) => product.category === selectedCategory
+      );
 
   return (
     <div className="max-w-7xl mx-auto px-5 py-16">
-   
+
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold">
           Explore Our Fashion Collection
@@ -41,11 +41,10 @@ const Product = () => {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-6 py-3 rounded-lg border transition font-semibold ${
-              selectedCategory === cat
+            className={`px-6 py-3 rounded-lg border transition font-semibold ${selectedCategory === cat
                 ? "bg-primary text-white border-primary"
                 : "bg-white text-black hover:bg-primary hover:text-white"
-            }`}
+              }`}
           >
             {cat}
           </button>
@@ -56,7 +55,7 @@ const Product = () => {
       {filteredProducts.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20">
           <h2 className="text-3xl font-bold text-red-500">
-            No Products Found 
+            No Products Found
           </h2>
 
           <p className="text-gray-500 mt-3">
@@ -91,16 +90,16 @@ const Product = () => {
 
                   {product.rating && (
                     <span className="badge badge-warning flex justify-center gap-2 items-center">
-                     <FaStar ></FaStar>  {product.rating}
+                      <FaStar ></FaStar>  {product.rating}
                     </span>
                   )}
                 </div>
 
                 <Link to={`/product/${product.id}`}>
-  <button className="btn btn-primary w-full">
-    View Details
-  </button>
-</Link>
+                  <button className="btn btn-primary w-full">
+                    View Details
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
